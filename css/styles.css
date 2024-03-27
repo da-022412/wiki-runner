@@ -1,6 +1,7 @@
 :root {
   --color-background: #282828;
   --color-text: #ebdbb2;
+  --color-text-contrast: #ebdbb2;
   --color-primary: #458588;
   --font-primary: "IBM Plex Sans", sans-serif;
   --size-width-medium: 50rem;
@@ -43,7 +44,7 @@ p, h1, h2, h3, h4, h5, h6 {
   appearance: none;
   background-color: transparent;
   border: 0;
-  color: var(--color-text);
+  color: var(--color-text-contrast);
   cursor: pointer;
   font-family: var(--font-primary);
   font-size: 0.75rem;
@@ -59,7 +60,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .banner {
   background-color: var(--color-primary);
-  color: var(--color-text);
   padding: 6.25rem 1rem 3.125rem;
 }
 
@@ -69,6 +69,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .banner-header h1 {
+  color: var(--color-text-contrast);
   font-family: var(--font-primary);
   font-size: 3rem;
   font-weight: 700;
@@ -200,18 +201,17 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @media (width >= 801px) {
   .mode-switcher {
-    right: calc((100vw - var(--size-width-medium) + 1.5rem) / 2);
+    right: calc((100vw - var(--size-width-medium)) / 2);
   }
 }
 
 @media (width >= 1024px) {
   .mode-switcher {
-    right: calc((100vw - var(--size-width-large) + 2rem) / 2);
+    right: calc((100vw - var(--size-width-large)) / 2);
   }
 
   .mode-switcher-toggle {
     font-size: 1rem;
-    font-weight: 400;
   }
 
   .banner {
