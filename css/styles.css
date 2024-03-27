@@ -34,6 +34,22 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+a {
+  color: var(--color-text);
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 1px solid var(--color-text);
+}
+
 .mode-switcher {
   position: absolute;
   right: 1rem;
@@ -121,22 +137,6 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1rem;
-}
-
-.content-section a {
-  color: var(--color-text);
-}
-
-.content-section a:visited {
-  color: inherit;
-}
-
-.content-section a:hover {
-  text-decoration: none;
-}
-
-.content-section a:focus-visible {
-  outline: 1px solid var(--color-text);
 }
 
 .content-section ul {
