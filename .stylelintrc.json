@@ -1,8 +1,11 @@
 {
+  "extends": "stylelint-config-standard",
+  "plugins": [
+		"stylelint-order"
+	],
   "rules": {
-    "indentation": 2,
     "max-nesting-depth": 8,
     "selector-max-compound-selectors": 8,
-    "number-leading-zero": null
+    "order/properties-alphabetical-order": true
   }
 }

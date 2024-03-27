@@ -10,7 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^3.0.2",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4"
   },
   "dependencies": {
     "stylelint": "^16.2.1"

@@ -6,7 +6,9 @@ gulp.task("serve", function () {
     server: "./",
   });
 
-  gulp.watch("*.html").on("change", browserSync.reload);
+  gulp
+    .watch(["*.html", "css/*.css", "scripts/*.js"])
+    .on("change", browserSync.reload);
 });
 
 gulp.task("default", gulp.series("serve"));

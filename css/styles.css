@@ -1,0 +1,249 @@
+:root {
+  --color-background: #282828;
+  --color-text: #ebdbb2;
+  --color-primary: #458588;
+  --font-primary: "IBM Plex Sans", sans-serif;
+  --size-width-medium: 50rem;
+  --size-width-large: 58.75rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.mode-switcher {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.mode-switcher-toggle {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mode-switcher-toggle:focus-visible {
+  outline: 1px solid var(--color-text);
+}
+
+.banner {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 6.25rem 1rem 3.125rem;
+}
+
+.banner-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.banner-header h1 {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.banner-media {
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.content {
+  background-color: var(--color-background);
+  padding: 3.125rem 1rem;
+}
+
+.content-intro {
+  margin-bottom: 3.125rem;
+}
+
+.content-intro p {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.content-section h2 {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1rem 0 0.625rem;
+}
+
+.content-section h3 {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1rem 0 0.625rem;
+}
+
+.content-section p {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.content-section a {
+  color: var(--color-text);
+}
+
+.content-section a:visited {
+  color: inherit;
+}
+
+.content-section a:hover {
+  text-decoration: none;
+}
+
+.content-section a:focus-visible {
+  outline: 1px solid var(--color-text);
+}
+
+.content-section ul {
+  margin-bottom: 1rem;
+}
+
+.content-section li {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.625rem;
+}
+
+@media (width >= 768px) {
+  .mode-switcher {
+    right: 1.5rem;
+  }
+
+  .banner {
+    padding: 4.25rem 1.5rem;
+  }
+
+  .banner-section {
+    align-items: center;
+    column-gap: 1.5rem;
+    display: flex;
+    margin: 0 auto;
+    max-width: var(--size-width-medium);
+  }
+
+  .banner-header {
+    flex: 0 0 calc(60% - 0.75rem);
+    margin: 0;
+    padding-right: calc((2 / 48) * 100%);
+    text-align: left;
+  }
+
+  .banner-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .banner-media {
+    flex: 0 0 calc(40% - 0.75rem);
+    padding: 0;
+  }
+
+  .content {
+    padding: 3.125rem 1.5rem;
+  }
+
+  .content-intro {
+    margin: 0 auto 3.125rem;
+    max-width: var(--size-width-medium);
+  }
+
+  .content-section {
+    margin: 0 auto;
+    max-width: var(--size-width-medium);
+  }
+}
+
+@media (width >= 801px) {
+  .mode-switcher {
+    right: calc((100vw - var(--size-width-medium) + 1.5rem) / 2);
+  }
+}
+
+@media (width >= 1024px) {
+  .mode-switcher {
+    right: calc((100vw - var(--size-width-large) + 2rem) / 2);
+  }
+
+  .mode-switcher-toggle {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .banner {
+    padding: 5rem 2rem;
+  }
+
+  .banner-section {
+    column-gap: 2rem;
+    max-width: var(--size-width-large);
+  }
+
+  .banner-header {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .banner-header h1 {
+    font-size: 4.25rem;
+  }
+
+  .banner-media {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .content {
+    padding: 3.125rem 2rem;
+  }
+
+  .content-intro {
+    max-width: var(--size-width-large);
+  }
+
+  .content-section {
+    max-width: var(--size-width-large);
+  }
+}
